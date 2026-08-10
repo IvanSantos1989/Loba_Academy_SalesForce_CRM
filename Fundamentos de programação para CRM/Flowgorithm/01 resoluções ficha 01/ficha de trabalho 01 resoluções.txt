@@ -1,0 +1,80 @@
+resolução - 1.1 valor de uma oportunidade
+
+1. ler o preço unitário
+2. ler o número de unidades
+3. ler o desconto (ex: 0,10 para 10%)
+4. calcular o valor: preço x unidades x (1-desconto)
+5. apresentar o valor da oportunidade
+6. terminar
+
+
+resolução - 1.2 média de duas avaliações
+
+1. ler a primeira avaliação (0 a 10)
+2. ler a segunda avaliação (0 a 10)
+3. somar as duas avaliações
+4. dividir a soma por 2 para obter a média
+5. apresentar a média
+6. terminar
+
+
+resolução - 1.3 qualificar um lead
+1. ler o orçamento do lead
+2. ler o orçamento mínimo aceitável
+3. comparar os dois valores:
+      - se o orçamento for maior ou igual ao mínimo, escrever "lead prioritário"
+      - caso contrário, escrever "lead para acompanhar"
+4. terminar
+
+
+resolução - 1.4 receita por unidade
+1. ler o valor total do negócio
+2. ler o número de unidades vendidas
+3. calcular a receita por unidade: valor total a dividir pelo número de unidades
+4. apresentar a receita por unidade
+5. terminar
+
+
+resolução - 3.1 qualificar um lead (três níveis) - pseudocódigo
+
+ler orçamento
+ler interesse
+
+se orçamento >= 10000 E interesse = "alto" ENTÃO
+     prioridade <- "Quente"
+SENÃO SE orçamento >= 5000 ENTÃO
+     prioridade <- "Morno"
+SENÃO
+     prioridade <- "Frio"
+FIM SE
+
+ESCREVER "Prioridade: ", prioridade
+
+
+resolução - 3.2 comissão de vendas
+
+ler venda
+
+SE venda > 5000 ENTÃO
+       comissão <- venda * 0.15
+SENÃO
+      comissão <- venda * 0.10
+FIM SE
+
+ESCREVER "Comissão: ", comissão
+
+
+resolução - 3.3 preço final com desconto por escalão
+
+LER valor
+
+SE valor > 200 ENTÃO
+       desconto <- valor * 0.20
+SENÃO SE > 100 ENTÃO
+       desconto <- valor * 0.10
+SENÃO
+      desconto <- 0
+total <- valor - desconto
+
+ESCREVER "Desconto: ", desconto
+ESCREVER "Valor final a pagar: ", total

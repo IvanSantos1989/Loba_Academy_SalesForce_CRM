@@ -1,0 +1,26 @@
+resolução - 3.1 comissão por escala
+
+LER venda
+
+SE venda > 200 ENTÃO
+      comissao <- venda * 0.15
+SENÃO SE venda > 100 ENTÃO
+      comissao <- venda * 0.10
+SENÃO
+      comissao <- venda * 0.05
+
+FIM SE
+
+ESCREVER "Comissão: ", comissao
+
+
+resolução - 3.2 validar um login
+
+LER utilizador
+LER pass
+
+SE utilizador == "admin" E pass == "1234" ENTÃO
+          ESCREVER "Acesso autorizado"
+SENÃO
+          ESCREVER "Credenciais inválidas"
+FIM SE

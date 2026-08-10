@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="2.4 lead valido ou incompleto"/>
+        <attribute name="authors" value="cesae"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-08-10 11:32:16 AM"/>
+        <attribute name="created" value="Y2VzYWU7REVTS1RPUC1KQk4zUkZKOzIwMjYtMDgtMTA7MTE6Mjk6MTEgQU07Mjg1NA=="/>
+        <attribute name="edited" value="Y2VzYWU7REVTS1RPUC1KQk4zUkZKOzIwMjYtMDgtMTA7MTE6MzI6MTYgQU07MjsyOTYy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="orcamento" type="Real" array="False" size=""/>
+            <declare name="empresa" type="String" array="False" size=""/>
+            <output expression="&quot;or&#231;amento lead: &quot;" newline="True"/>
+            <input variable="orcamento"/>
+            <output expression="&quot;nome da empresa: &quot;" newline="True"/>
+            <input variable="empresa"/>
+            <if expression="orcamento &gt; 0 and empresa != &quot;&quot;">
+                <then>
+                    <output expression="&quot;lead v&#225;lido&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;faltam dados&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

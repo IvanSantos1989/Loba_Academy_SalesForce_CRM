@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="2.1 calcular valor oportunidade"/>
+        <attribute name="authors" value="cesae"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-08-10 11:39:02 AM"/>
+        <attribute name="created" value="Y2VzYWU7REVTS1RPUC1KQk4zUkZKOzIwMjYtMDgtMTA7MDk6MDg6NTcgQU07Mjg2OA=="/>
+        <attribute name="edited" value="Y2VzYWU7REVTS1RPUC1KQk4zUkZKOzIwMjYtMDgtMTA7MTE6Mzk6MDIgQU07ODsyOTcw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="precoUnit, unidades, desconto, valor" type="Real" array="False" size=""/>
+            <output expression="&quot;qual pre&#231;o unit&#225;rio? &quot;" newline="True"/>
+            <input variable="precoUnit"/>
+            <output expression="&quot;n&#250;mero de unidades? &quot;" newline="True"/>
+            <input variable="unidades"/>
+            <output expression="&quot;valor do desconto: ex 0.10 para 10% &quot;" newline="True"/>
+            <input variable="desconto"/>
+            <assign variable="valor" expression="precoUnit * unidades * (1 - desconto)"/>
+            <output expression="&quot;O valor final &#233; &quot;&amp; valor" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

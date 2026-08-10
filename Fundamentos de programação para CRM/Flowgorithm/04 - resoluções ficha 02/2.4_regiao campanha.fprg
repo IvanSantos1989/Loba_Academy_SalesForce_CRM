@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="2.4_regiao campanha"/>
+        <attribute name="authors" value="ivanl"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-08-10 03:18:31 PM"/>
+        <attribute name="created" value="aXZhbmw7TEFQVE9QLVJRNEo2OU1WOzIwMjYtMDgtMTA7MDM6MTM6MjggUE07Mjg5MA=="/>
+        <attribute name="edited" value="aXZhbmw7TEFQVE9QLVJRNEo2OU1WOzIwMjYtMDgtMTA7MDM6MTg6MzEgUE07MTsyOTk3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="regiao" type="String" array="False" size=""/>
+            <output expression="&quot;Regi&#227;o do lead: &quot;" newline="True"/>
+            <input variable="regiao"/>
+            <if expression="regiao == &quot;Norte&quot; or regiao == &quot;Centro&quot; or regiao == &quot;norte&quot; or regiao == &quot;centro&quot;">
+                <then>
+                    <output expression="&quot;Campanha A&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Campanha B&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

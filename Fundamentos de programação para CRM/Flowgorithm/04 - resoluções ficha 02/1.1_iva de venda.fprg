@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="1.1_iva de venda"/>
+        <attribute name="authors" value="ivanl"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-08-10 02:30:17 PM"/>
+        <attribute name="created" value="aXZhbmw7TEFQVE9QLVJRNEo2OU1WOzIwMjYtMDgtMTA7MDI6MjE6MjMgUE07Mjg4Mw=="/>
+        <attribute name="edited" value="aXZhbmw7TEFQVE9QLVJRNEo2OU1WOzIwMjYtMDgtMTA7MDI6MzA6MTcgUE07MTsyOTk0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="venda, iva, total" type="Real" array="False" size=""/>
+            <output expression="&quot;Valor da venda (sem iva): &quot;" newline="True"/>
+            <input variable="venda"/>
+            <assign variable="iva" expression="venda * 0.23"/>
+            <assign variable="total" expression="venda + iva"/>
+            <output expression="&quot;IVA: &quot; &amp; iva" newline="True"/>
+            <output expression="&quot;Total a pagar: &quot; &amp; total" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
