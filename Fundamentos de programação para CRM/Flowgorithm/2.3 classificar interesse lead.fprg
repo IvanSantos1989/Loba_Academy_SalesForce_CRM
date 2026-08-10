@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="2.3 classificar interesse lead"/>
+        <attribute name="authors" value="cesae"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-08-10 11:28:00 AM"/>
+        <attribute name="created" value="Y2VzYWU7REVTS1RPUC1KQk4zUkZKOzIwMjYtMDgtMTA7MTA6MzM6MzcgQU07Mjg1Ng=="/>
+        <attribute name="edited" value="Y2VzYWU7REVTS1RPUC1KQk4zUkZKOzIwMjYtMDgtMTA7MTE6Mjg6MDAgQU07MzsyOTYx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="pontuacao" type="Integer" array="False" size=""/>
+            <declare name="classificacao" type="String" array="False" size=""/>
+            <output expression="&quot;Qual sua pontua&#231;&#227;o de interesse de 0 a 100?&quot;" newline="True"/>
+            <input variable="pontuacao"/>
+            <if expression="pontuacao &gt;= 70">
+                <then>
+                    <assign variable="classificacao" expression="&quot;Interesse Alto&quot;"/>
+                </then>
+                <else>
+                    <if expression="pontuacao &gt;= 40">
+                        <then>
+                            <assign variable="classificacao" expression="&quot;Interesse M&#233;dio&quot;"/>
+                        </then>
+                        <else>
+                            <if expression="pontuacao &gt; 0">
+                                <then>
+                                    <assign variable="classificacao" expression="&quot;Interesse Baixo&quot;"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;n&#250;mero negativo n&#227;o aceito&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;Seu nivel de interesse &#233; &quot; &amp; classificacao" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

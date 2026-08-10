@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="01_pontuacao_interesse"/>
+        <attribute name="authors" value="cesae"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-08-04 05:33:53 "/>
+        <attribute name="created" value="Y2VzYWU7REVTS1RPUC1KQk4zUkZKOzIwMjYtMDgtMDQ7IjA1OjE0OjM3ICI7Mjc4OA=="/>
+        <attribute name="edited" value="Y2VzYWU7REVTS1RPUC1KQk4zUkZKOzIwMjYtMDgtMDQ7IjA1OjMzOjUzICI7MTsyODk1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="pontuacao, i" type="Integer" array="False" size=""/>
+            <declare name="classificacao" type="String" array="False" size=""/>
+            <for variable="i" start="1" end="3" direction="inc" step="1">
+                <output expression="i &amp; &quot; Pontua&#231;&#227;o de interesse (0-100): &quot;" newline="True"/>
+                <input variable="pontuacao"/>
+                <if expression="pontuacao &gt;=70">
+                    <then>
+                        <assign variable="classificacao" expression="&quot;Alto&quot;"/>
+                    </then>
+                    <else>
+                        <if expression="pontuacao &gt;=40">
+                            <then>
+                                <assign variable="classificacao" expression="&quot;M&#233;dio&quot;"/>
+                            </then>
+                            <else>
+                                <assign variable="classificacao" expression="&quot;Baixo&quot;"/>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+                <output expression="&quot;Interesse: &quot; &amp; classificacao" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

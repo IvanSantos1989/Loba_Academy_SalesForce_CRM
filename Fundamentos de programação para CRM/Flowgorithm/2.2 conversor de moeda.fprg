@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="2.2 conversor de moeda"/>
+        <attribute name="authors" value="cesae"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-08-10 10:32:51 AM"/>
+        <attribute name="created" value="Y2VzYWU7REVTS1RPUC1KQk4zUkZKOzIwMjYtMDgtMTA7MTA6MjA6MjYgQU07Mjg1MA=="/>
+        <attribute name="edited" value="Y2VzYWU7REVTS1RPUC1KQk4zUkZKOzIwMjYtMDgtMTA7MTA6MzI6NTEgQU07MjsyOTYw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="dolar, txcambio, euros" type="Real" array="False" size=""/>
+            <output expression="&quot;quantos dolares? &quot;" newline="True"/>
+            <input variable="dolar"/>
+            <output expression="&quot;valor da taxa de c&#226;mbio: &quot;" newline="True"/>
+            <input variable="txcambio"/>
+            <assign variable="euros" expression="dolar * txcambio"/>
+            <output expression="&quot;valor em euros ap&#243;s a convers&#227;o: &quot; &amp; euros" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

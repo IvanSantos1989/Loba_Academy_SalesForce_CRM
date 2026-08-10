@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="01_slide16a"/>
+        <attribute name="authors" value="cesae"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-08-04 03:47:35 "/>
+        <attribute name="created" value="Y2VzYWU7REVTS1RPUC1KQk4zUkZKOzIwMjYtMDgtMDQ7IjAyOjIyOjIxICI7Mjc3Nw=="/>
+        <attribute name="edited" value="Y2VzYWU7REVTS1RPUC1KQk4zUkZKOzIwMjYtMDgtMDQ7IjAzOjQ3OjM1ICI7MjsyODk5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="nota1, nota2, media, total, unidades, receita" type="Real" array="False" size=""/>
+            <output expression="&quot;Nota 1: &quot;" newline="True"/>
+            <input variable="nota1"/>
+            <output expression="&quot;Nota 2: &quot;" newline="True"/>
+            <input variable="nota2"/>
+            <assign variable="media" expression="(nota1 + nota2) / 2"/>
+            <output expression="&quot;Media: &quot; &amp; media" newline="True"/>
+            <output expression="&quot;Total de vendas: &quot;" newline="True"/>
+            <input variable="total"/>
+            <output expression="&quot;N&#250;mero de unidades: &quot;" newline="True"/>
+            <input variable="unidades"/>
+            <assign variable="receita" expression="total / unidades"/>
+            <output expression="&quot;Receita por unidade: &quot; &amp; receita" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
