@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="1.comiss&#227;o do comercial"/>
+        <attribute name="authors" value="ivanl"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-08-10 04:10:59 PM"/>
+        <attribute name="created" value="aXZhbmw7TEFQVE9QLVJRNEo2OU1WOzIwMjYtMDgtMTA7MDM6NTM6MDQgUE07Mjg4OA=="/>
+        <attribute name="edited" value="aXZhbmw7TEFQVE9QLVJRNEo2OU1WOzIwMjYtMDgtMTA7MDQ6MTA6NTkgUE07MTszMDAw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="valor, comissao, valorComissao" type="Real" array="False" size=""/>
+            <output expression="&quot;Valor da venda: &quot;" newline="True"/>
+            <input variable="valor"/>
+            <output expression="&quot;Qual a comiss&#227;o de venda? &quot;" newline="True"/>
+            <input variable="comissao"/>
+            <assign variable="valorComissao" expression="valor * comissao"/>
+            <output expression="&quot;O valor da venda com comiss&#227;o &#233; &quot; &amp; valorComissao" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

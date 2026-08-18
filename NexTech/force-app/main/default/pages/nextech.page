@@ -1,0 +1,121 @@
+<apex:page showHeader="false" sidebar="false" standardStylesheets="false">
+    <!-- <apex:stylesheet value="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"/> -->
+    <head>
+            <apex:stylesheet value="{!URLFOR($Resource.NexTechAssets, 'css/style.css')}" />
+        </head>
+
+    <div class="topbar">
+        <div class="inner">
+            <div class="brand">NexTech</div>
+            <div class="nav">
+                <a href="#produtos">Produtos</a>
+                <a href="#solucoes">Soluções</a>
+                <a href="#contato">Contato</a>
+                <button class="cta">Fale com um especialista</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="hero">
+            <div class="hero-text">
+                <h1>Tech para empresas que vendem mais.</h1>
+                <p>
+                    Soluções digitais sob medida para empresas B2B que querem automatizar processos,
+                    melhorar a eficiência operacional e crescer com inteligência.
+                </p>
+                <div class="hero-actions">
+                    <a href="#produtos" class="primary-btn">Ver catálogo</a>
+                    <a href="#contato" class="secondary-btn">Solicitar orçamento</a>
+                </div>
+            </div>
+
+            <div class="hero-card">
+                <span class="badge">Plataforma B2B</span>
+                <div class="device-box">
+                    <div style="font-size: 14px; opacity: 0.8; margin-bottom: 8px;">Dashboard corporativo</div>
+                    <div style="font-size: 42px; font-weight: 800;">+178%</div>
+                    <div style="font-size: 14px; opacity: 0.8; margin-top: 8px;">crescimento em eficiência operacional</div>
+                    <div class="mini-stats">
+                        <div>
+                            <strong>24/7</strong>
+                            <span>Suporte</span>
+                        </div>
+                        <div>
+                            <strong>3x</strong>
+                            <span>Mais rapidez</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-title" id="produtos">
+            <h2>Produtos em destaque</h2>
+            <p>Ferramentas essenciais para otimizar vendas, atendimento e gestão B2B.</p>
+        </div>
+
+        <div class="products">
+            <div class="product-card">
+                <div class="product-image product-1">CRM Pro</div>
+                <div class="product-content">
+                    <span class="tag">Gestão</span>
+                    <h3>CRM Empresarial</h3>
+                    <p>Centralize clientes, oportunidades, automações e acompanhamento de vendas em uma única plataforma.</p>
+                    <div class="price-row">
+                        <div class="price">R$ 899 <small>/mês</small></div>
+                        <button class="buy-btn">Comprar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image product-2">ERP Lite</div>
+                <div class="product-content">
+                    <span class="tag">Operação</span>
+                    <h3>ERP B2B</h3>
+                    <p>Controle financeiro, estoque, pedidos e processos internos com visibilidade completa da operação.</p>
+                    <div class="price-row">
+                        <div class="price">R$ 1.299 <small>/mês</small></div>
+                        <button class="buy-btn">Comprar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image product-3">IA Suite</div>
+                <div class="product-content">
+                    <span class="tag">Inovação</span>
+                    <h3>Inteligência Artificial</h3>
+                    <p>Automatize atendimento, analise dados em tempo real e aumente a produtividade da sua equipe.</p>
+                    <div class="price-row">
+                        <div class="price">R$ 1.599 <small>/mês</small></div>
+                        <button class="buy-btn">Comprar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-title" id="solucoes">
+            <h2>Por que escolher a NexTech?</h2>
+        </div>
+
+        <div class="features">
+            <div class="feature-box">
+                <div class="icon">⚡</div>
+                <h4>Processos ágeis</h4>
+                <p>Automatize rotinas e reduza tempo gasto em tarefas repetitivas.</p>
+            </div>
+            <div class="feature-box">
+                <div class="icon">📊</div>
+                <h4>Dados em tempo real</h4>
+                <p>Acompanhe métricas de vendas, operação e atendimento com precisão.</p>
+            </div>
+            <div class="feature-box">
+                <div class="icon">🔒</div>
+                <h4>Segurança</h4>
+                <p>Infraestrutura confiável e suporte especializado para empresas em crescimento.</p>
+            </div>
+        </div>
+    </div>
+</apex:page>

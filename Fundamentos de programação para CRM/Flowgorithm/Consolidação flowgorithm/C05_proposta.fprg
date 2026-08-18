@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="C05_proposta"/>
+        <attribute name="authors" value="ivanl"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-08-10 08:35:06 PM"/>
+        <attribute name="created" value="aXZhbmw7TEFQVE9QLVJRNEo2OU1WOzIwMjYtMDgtMTA7MDU6MDQ6NDEgUE07Mjg4Nw=="/>
+        <attribute name="edited" value="aXZhbmw7TEFQVE9QLVJRNEo2OU1WOzIwMjYtMDgtMTA7MDg6MzU6MDYgUE07MTszMDAz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="precoUnit, subtotal, iva, desconto, totalFinal, totalComDesc" type="Real" array="False" size=""/>
+            <declare name="unidades" type="Integer" array="False" size=""/>
+            <declare name="regiao" type="String" array="False" size=""/>
+            <output expression="&quot;Qual sua regi&#227;o?&quot;" newline="True"/>
+            <input variable="regiao"/>
+            <output expression="&quot;Qual o pre&#231;o unit&#225;rio?&quot;" newline="True"/>
+            <input variable="precoUnit"/>
+            <output expression="&quot;Quantas unidades?&quot;" newline="True"/>
+            <input variable="unidades"/>
+            <assign variable="subtotal" expression="precoUnit * unidades"/>
+            <if expression="regiao == &quot;Norte&quot; or regiao == &quot;norte&quot; or regiao == &quot;Centro&quot; or regiao == &quot;centro&quot;">
+                <then>
+                    <assign variable="desconto" expression="subtotal * 0.05"/>
+                    <assign variable="totalComDesc" expression="subtotal - desconto"/>
+                    <assign variable="iva" expression="totalComDesc * 0.23"/>
+                    <assign variable="totalFinal" expression="totalComDesc + iva"/>
+                    <output expression="&quot;O total final com desconto aplicado + iva incluso &#233; &quot; &amp; totalFinal" newline="True"/>
+                    <output expression="&quot;Foi aplicado um desconto no subtotal sem iva de &quot; &amp; desconto" newline="True"/>
+                    <output expression="&quot;O valor do IVA ap&#243;s o desconto aplicado foi de &quot; &amp; iva" newline="True"/>
+                </then>
+                <else>
+                    <assign variable="iva" expression="subtotal * 0.23"/>
+                    <assign variable="totalFinal" expression="subtotal + iva"/>
+                    <output expression="&quot;O total final sem desconto aplicado + iva incluso &#233; &quot; &amp; totalFinal" newline="True"/>
+                    <output expression="&quot;O valor do IVA foi de &quot; &amp; iva" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
