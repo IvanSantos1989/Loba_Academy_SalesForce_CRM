@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="01_soma_media"/>
+        <attribute name="authors" value="ivanl"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-08-18 02:03:55 PM"/>
+        <attribute name="created" value="aXZhbmw7TEFQVE9QLVJRNEo2OU1WOzIwMjYtMDgtMTg7MTI6MTA6NTIgUE07Mjg5Mg=="/>
+        <attribute name="edited" value="aXZhbmw7TEFQVE9QLVJRNEo2OU1WOzIwMjYtMDgtMTg7MDI6MDM6NTUgUE07NTszMDA4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <declare name="total, media, oportunidades" type="Real" array="False" size=""/>
+            <assign variable="total" expression="0"/>
+            <for variable="i" start="0" end="2" direction="inc" step="1">
+                <output expression="&quot;Valor da oportunidade &quot; &amp; i &amp; &quot;?: &quot;" newline="True"/>
+                <input variable="oportunidades"/>
+                <assign variable="total" expression="total + oportunidades"/>
+            </for>
+            <assign variable="media" expression="total/3"/>
+            <output expression="&quot;Total de oportunidades: &quot; &amp; total" newline="True"/>
+            <output expression="&quot;M&#233;dia das oportunidades: &quot; &amp; media" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
