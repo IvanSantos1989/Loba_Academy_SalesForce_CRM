@@ -1,8 +1,5 @@
 // Resolução do exercicio do slide 17 c
 // Função que classifica um lead em função do orçamento e do interesse
-// Retorna "Quente" se o orçamento >= 1000 e interesse = "alto"
-// Retorna "Morno" se o orçamento >= 5000
-// Retorna "Frio" caso contrário
 
 // importar o módulo prompt-sync para permitir a entrada de dados pelo utilizador
 const prompt = require('prompt-sync')();
