@@ -1,0 +1,291 @@
+<apex:page showHeader="false" sidebar="false" standardStylesheets="false">
+    <head>
+        <apex:stylesheet value="{!URLFOR($Resource.NexTechAssets, 'css/style.css')}" />
+        <style>
+            .thank-you-page {
+                padding-top: 50px;
+            }
+
+            .success-hero {
+                display: grid;
+                grid-template-columns: 1.2fr 0.8fr;
+                gap: 28px;
+                align-items: center;
+                padding: 60px 0 20px;
+            }
+
+            .success-panel {
+                background: rgba(255, 255, 255, 0.9);
+                border: 1px solid #dfeaf9;
+                border-radius: 24px;
+                padding: 42px;
+                box-shadow: 0 16px 32px rgba(11, 31, 58, 0.08);
+            }
+
+            .success-icon {
+                width: 84px;
+                height: 84px;
+                border-radius: 50%;
+                background: linear-gradient(135deg, #0b1f3a 0%, #1a4a7a 100%);
+                color: #ffffff;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 40px;
+                font-weight: 800;
+                margin-bottom: 20px;
+                box-shadow: 0 12px 24px rgba(11, 31, 58, 0.2);
+            }
+
+            .success-badge {
+                display: inline-block;
+                background: #edf5ff;
+                color: #0b1f3a;
+                border-radius: 999px;
+                padding: 8px 12px;
+                font-size: 12px;
+                font-weight: 700;
+                letter-spacing: 0.08em;
+                text-transform: uppercase;
+                margin-bottom: 18px;
+            }
+
+            .success-panel h1 {
+                font-size: 52px;
+                line-height: 1.1;
+                margin: 0 0 18px;
+                color: #0b1f3a;
+            }
+
+            .success-panel p {
+                font-size: 18px;
+                line-height: 1.8;
+                color: #36557d;
+                margin: 0 0 28px;
+                max-width: 620px;
+                white-space: pre-line;
+            }
+
+            .success-card {
+                background: linear-gradient(135deg, #0b1f3a 0%, #1a4a7a 100%);
+                border-radius: 24px;
+                padding: 28px 24px;
+                color: #fff;
+                box-shadow: 0 20px 40px rgba(11, 31, 58, 0.22);
+            }
+
+            .success-card-header {
+                display: flex;
+                align-items: baseline;
+                justify-content: space-between;
+                gap: 12px;
+                padding-bottom: 18px;
+                border-bottom: 1px solid rgba(255,255,255,0.15);
+                margin-bottom: 20px;
+            }
+
+            .mini-label {
+                font-size: 12px;
+                letter-spacing: 0.08em;
+                text-transform: uppercase;
+                opacity: 0.75;
+            }
+
+            .success-card-header strong {
+                font-size: 30px;
+            }
+
+            .success-list {
+                display: flex;
+                flex-direction: column;
+                gap: 18px;
+            }
+
+            .success-list div {
+                display: flex;
+                align-items: flex-start;
+                gap: 12px;
+            }
+
+            .success-dot {
+                display: inline-block;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background: #4da3ff;
+                margin-top: 9px;
+                flex-shrink: 0;
+            }
+
+            .success-list p {
+                margin: 0;
+                color: #dfeeff;
+                font-size: 15px;
+                line-height: 1.8;
+            }
+
+            .section-title p,
+            .feature-box p,
+            .footer-description,
+            .footer-list li {
+                line-height: 1.8;
+            }
+
+            @media (max-width: 900px) {
+                .success-hero {
+                    grid-template-columns: 1fr;
+                }
+
+                .success-panel h1 {
+                    font-size: 40px;
+                }
+            }
+
+            @media (max-width: 600px) {
+                .thank-you-page {
+                    padding-top: 30px;
+                }
+
+                .success-panel {
+                    padding: 28px 20px;
+                }
+
+                .success-card {
+                    padding: 22px 18px;
+                }
+
+                .success-panel h1 {
+                    font-size: 36px;
+                }
+            }
+        </style>
+    </head>
+
+    <div class="topbar">
+        <div class="inner">
+            <div class="brand">NexTech</div>
+            <div class="nav">
+                <a href="{!URLFOR($Page.nextech)}#solucoes">Soluções</a>
+                <a href="{!URLFOR($Page.nextech)}#contato">Contato</a>
+                <apex:outputLink value="{!URLFOR($Page.nextech)}#contato" styleClass="cta">Fale com um especialista</apex:outputLink>
+            </div>
+        </div>
+    </div>
+
+    <div class="container thank-you-page">
+        <div class="success-hero">
+            <div class="success-panel">
+                <div class="success-icon">✓</div>
+                <span class="success-badge">Mensagem enviada com sucesso</span>
+                <h1>Obrigado por entrar em contato!</h1>
+                <p>
+                    Recebemos sua mensagem e nossa equipe da NexTech vai responder em breve com uma análise
+                    personalizada para o seu negócio e as melhores soluções para acelerar sua operação.
+                </p>
+                <div class="hero-actions">
+                    <apex:outputLink value="{!URLFOR($Page.nextech)}" styleClass="primary-btn">Voltar para a página inicial</apex:outputLink>
+                    
+                </div>
+            </div>
+
+            <div class="success-card">
+                <div class="success-card-header">
+                    <span class="mini-label">Prazo de resposta</span>
+                    <strong>Até 24h</strong>
+                </div>
+
+                <div class="success-list">
+                    <div>
+                        <span class="success-dot"></span>
+                        <p>Atendimento personalizado com especialistas em vendas e operação.</p>
+                    </div>
+                    <div>
+                        <span class="success-dot"></span>
+                        <p>Análise estratégica para entender seu cenário e objetivos.</p>
+                    </div>
+                    <div>
+                        <span class="success-dot"></span>
+                        <p>Recomendação de soluções alinhadas ao crescimento do seu negócio.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-title">
+            <h2>O que acontece agora?</h2>
+            <p>Em poucos passos, nossa equipe vai entender sua demanda e orientar a melhor solução para sua empresa.</p>
+        </div>
+
+        <div class="features">
+            <div class="feature-box">
+                <div class="icon">📩</div>
+                <h4>Recebemos sua solicitação</h4>
+                <p>Seu pedido foi registrado e encaminhado para o time comercial da NexTech.</p>
+            </div>
+            <div class="feature-box">
+                <div class="icon">🤝</div>
+                <h4>Vamos entrar em contato</h4>
+                <p>Um especialista vai validar suas necessidades e tirar dúvidas sobre sua operação.</p>
+            </div>
+            <div class="feature-box">
+                <div class="icon">🚀</div>
+                <h4>Você ganha uma proposta</h4>
+                <p>Receba uma recomendação personalizada com a melhor solução para acelerar seus resultados.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-section footer-brand-section">
+                    <h3 class="footer-brand">NexTech</h3>
+                    <p class="footer-description">Soluções digitais sob medida para empresas B2B que querem crescer com inteligência.</p>
+                    <div class="footer-socials">
+                        <a href="#" class="social-link" title="LinkedIn">in</a>
+                        <a href="#" class="social-link" title="Twitter">tw</a>
+                        <a href="#" class="social-link" title="Facebook">f</a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4 class="footer-section-title">Produtos</h4>
+                    <ul class="footer-list">
+                        <li><a href="{!URLFOR($Page.nextech)}#produtos">CRM Empresarial</a></li>
+                        <li><a href="{!URLFOR($Page.nextech)}#produtos">ERP B2B</a></li>
+                        <li><a href="{!URLFOR($Page.nextech)}#produtos">Inteligência Artificial</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4 class="footer-section-title">Empresa</h4>
+                    <ul class="footer-list">
+                        <li><a href="{!URLFOR($Page.nextech)}#solucoes">Soluções</a></li>
+                        <li><a href="{!URLFOR($Page.nextech)}#sobre">Sobre</a></li>
+                        <li><a href="{!URLFOR($Page.nextech)}#blog">Blog</a></li>
+                        <li><a href="{!URLFOR($Page.nextech)}#careers">Carreiras</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4 class="footer-section-title">Contato</h4>
+                    <ul class="footer-list">
+                        <li><a href="mailto:contato@nextech.com">contato@nextech.com</a></li>
+                        <li><a href="tel:+551140000000">(11) 4000-0000</a></li>
+                        <li>São Paulo, SP</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-divider"></div>
+
+            <div class="footer-bottom">
+                <p class="footer-copyright">© 2026 NexTech. Todos os direitos reservados.</p>
+                <div class="footer-links-bottom">
+                    <a href="#">Política de privacidade</a>
+                    <a href="#">Termos de uso</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</apex:page>

@@ -1,17 +1,15 @@
 <apex:page showHeader="false" sidebar="false" standardStylesheets="false">
-    <!-- <apex:stylesheet value="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"/> -->
     <head>
-            <apex:stylesheet value="{!URLFOR($Resource.NexTechAssets, 'css/style.css')}" />
-        </head>
+        <apex:stylesheet value="{!URLFOR($Resource.NexTechAssets, 'css/style.css')}" />
+    </head>
 
     <div class="topbar">
         <div class="inner">
             <div class="brand">NexTech</div>
             <div class="nav">
-                <a href="#produtos">Produtos</a>
                 <a href="#solucoes">Soluções</a>
                 <a href="#contato">Contato</a>
-                <button class="cta">Fale com um especialista</button>
+                <button type="button" class="cta">Fale com um especialista</button>
             </div>
         </div>
     </div>
@@ -50,12 +48,12 @@
             </div>
         </div>
 
-        <div class="section-title" id="produtos">
+        <div class="section-title" id="solucoes">
             <h2>Produtos em destaque</h2>
             <p>Ferramentas essenciais para otimizar vendas, atendimento e gestão B2B.</p>
         </div>
 
-        <div class="products">
+        <div class="products" id="produtos">
             <div class="product-card">
                 <div class="product-image product-1">CRM Pro</div>
                 <div class="product-content">
@@ -64,7 +62,7 @@
                     <p>Centralize clientes, oportunidades, automações e acompanhamento de vendas em uma única plataforma.</p>
                     <div class="price-row">
                         <div class="price">R$ 899 <small>/mês</small></div>
-                        <button class="buy-btn">Comprar</button>
+                        <button type="button" class="buy-btn">Comprar</button>
                     </div>
                 </div>
             </div>
@@ -77,7 +75,7 @@
                     <p>Controle financeiro, estoque, pedidos e processos internos com visibilidade completa da operação.</p>
                     <div class="price-row">
                         <div class="price">R$ 1.299 <small>/mês</small></div>
-                        <button class="buy-btn">Comprar</button>
+                        <button type="button" class="buy-btn">Comprar</button>
                     </div>
                 </div>
             </div>
@@ -90,13 +88,13 @@
                     <p>Automatize atendimento, analise dados em tempo real e aumente a produtividade da sua equipe.</p>
                     <div class="price-row">
                         <div class="price">R$ 1.599 <small>/mês</small></div>
-                        <button class="buy-btn">Comprar</button>
+                        <button type="button" class="buy-btn">Comprar</button>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="section-title" id="solucoes">
+        <div class="section-title">
             <h2>Por que escolher a NexTech?</h2>
         </div>
 
@@ -118,4 +116,119 @@
             </div>
         </div>
     </div>
+
+    <div class="contact-section" id="contato">
+        <div class="container">
+            <div class="section-title">
+                <h2>Entre em contato</h2>
+                <p>Fale com nossos especialistas e descubra como podemos ajudar seu negócio a crescer.</p>
+            </div>
+
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <div class="info-box">
+                        <div class="info-icon">📧</div>
+                        <h4>Email</h4>
+                        <p><a href="mailto:contato@nextech.com">contato@nextech.com</a></p>
+                    </div>
+                    <div class="info-box">
+                        <div class="info-icon">📱</div>
+                        <h4>Telefone</h4>
+                        <p><a href="tel:+551140000000">(11) 4000-0000</a></p>
+                    </div>
+                    <div class="info-box">
+                        <div class="info-icon">📍</div>
+                        <h4>Localização</h4>
+                        <p>São Paulo, SP</p>
+                    </div>
+                </div>
+
+                <form class="contact-form" action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8&amp;orgId=00Dfj00000Yu14K" method="POST">
+                    <input type="hidden" name="orgid" value="00Dfj00000Yu14K"/>
+                    <input type="hidden" name="retURL" value="{!URLFOR($Page.obrigado)}"/>
+
+                    <div class="form-group">
+                        <label for="name">Nome Completo</label>
+                        <input id="name" maxlength="80" name="name" type="text" placeholder="Seu nome"/>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input id="email" maxlength="80" name="email" type="email" placeholder="seu@email.com"/>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Telefone</label>
+                        <input id="phone" maxlength="40" name="phone" type="tel" placeholder="(11) 99999-9999"/>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Assunto</label>
+                        <input id="subject" maxlength="80" name="subject" type="text" placeholder="Qual é sua dúvida?"/>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="description">Mensagem</label>
+                        <textarea name="description" id="description" placeholder="Descreva sua necessidade em detalhes..." rows="6"></textarea>
+                    </div>
+
+                    <button type="submit" name="submit" class="submit-btn">Enviar Mensagem</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-section footer-brand-section">
+                    <h3 class="footer-brand">NexTech</h3>
+                    <p class="footer-description">Soluções digitais sob medida para empresas B2B que querem crescer com inteligência.</p>
+                    <div class="footer-socials">
+                        <a href="#" class="social-link" title="LinkedIn">in</a>
+                        <a href="#" class="social-link" title="Twitter">tw</a>
+                        <a href="#" class="social-link" title="Facebook">f</a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4 class="footer-section-title">Produtos</h4>
+                    <ul class="footer-list">
+                        <li><a href="#produtos">CRM Empresarial</a></li>
+                        <li><a href="#produtos">ERP B2B</a></li>
+                        <li><a href="#produtos">Inteligência Artificial</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4 class="footer-section-title">Empresa</h4>
+                    <ul class="footer-list">
+                        <li><a href="#solucoes">Soluções</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#careers">Carreiras</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4 id="contato" class="footer-section-title">Contato</h4>
+                    <ul class="footer-list">
+                        <li><a href="mailto:contato@nextech.com">contato@nextech.com</a></li>
+                        <li><a href="tel:+551140000000">(11) 4000-0000</a></li>
+                        <li>São Paulo, SP</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-divider"></div>
+
+            <div class="footer-bottom">
+                <p class="footer-copyright">© 2024 NexTech. Todos os direitos reservados.</p>
+                <div class="footer-links-bottom">
+                    <a href="#politica">Política de Privacidade</a>
+                    <a href="#termos">Termos de Serviço</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 </apex:page>

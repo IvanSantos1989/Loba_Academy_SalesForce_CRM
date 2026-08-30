@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="04_menu"/>
+        <attribute name="authors" value="ivanl"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-08-29 02:58:24 AM"/>
+        <attribute name="created" value="aXZhbmw7TEFQVE9QLVJRNEo2OU1WOzIwMjYtMDgtMjk7MDE6MTE6NDcgQU07Mjg4Mg=="/>
+        <attribute name="edited" value="aXZhbmw7TEFQVE9QLVJRNEo2OU1WOzIwMjYtMDgtMjk7MDI6NTg6MjQgQU07MzsyOTk5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="opcao" type="Integer" array="False" size=""/>
+            <declare name="op1" type="String" array="False" size=""/>
+            <assign variable="opcao" expression="0"/>
+            <do expression="opcao != 0">
+                <output expression="&quot;Menu de gest&#227;o de leads&quot;" newline="True"/>
+                <output expression="&quot;1 - Adicionar lead&quot;" newline="True"/>
+                <output expression="&quot;2 - Listar leads&quot;" newline="True"/>
+                <output expression="&quot;0 - Sair&quot;" newline="True"/>
+                <input variable="opcao"/>
+                <while expression="opcao != 0">
+                    <if expression="opcao == 1">
+                        <then>
+                            <output expression="&quot;nome da lead&quot;" newline="True"/>
+                            <input variable="op1"/>
+                            <output expression="&quot;lead adicionado&quot;" newline="True"/>
+                        </then>
+                        <else/>
+                    </if>
+                    <if expression="opcao == 2">
+                        <then>
+                            <output expression="&quot;Listagem de leads completa&quot;" newline="True"/>
+                        </then>
+                        <else/>
+                    </if>
+                    <output expression="&quot;Menu de gest&#227;o de leads&quot;" newline="True"/>
+                    <output expression="&quot;1 - Adicionar lead&quot;" newline="True"/>
+                    <output expression="&quot;2 - Listar leads&quot;" newline="True"/>
+                    <output expression="&quot;0 - Sair&quot;" newline="True"/>
+                    <input variable="opcao"/>
+                </while>
+            </do>
+            <output expression="&quot;Menu finalizado&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
