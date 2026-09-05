@@ -1,234 +1,444 @@
-<apex:page showHeader="false" sidebar="false" standardStylesheets="false">
+<apex:page showHeader="false" sidebar="false" standardStylesheets="false" docType="html-5.0">
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>NexTech | Tecnologia para empresas</title>
         <apex:stylesheet value="{!URLFOR($Resource.NexTechAssets, 'css/style.css')}" />
     </head>
 
-    <div class="topbar">
-        <div class="inner">
-            <div class="brand">NexTech</div>
-            <div class="nav">
-                <a href="#solucoes">Soluções</a>
-                <a href="#contato">Contato</a>
-                <button type="button" class="cta">Fale com um especialista</button>
-            </div>
-        </div>
-    </div>
+    <div class="site-shell">
+        <header class="topbar">
+            <div class="inner">
+                <a class="brand brand-logo" href="#inicio" aria-label="NexTech - página inicial">
+                    <span class="navbar-logo-crop">
+                        <img class="navbar-logo-image" src="{!URLFOR($Resource.NexTechAssets, 'images/nextech-logo.png')}" alt="NexTech" />
+                    </span>
+                </a>
 
-    <div class="container">
-        <div class="hero">
-            <div class="hero-text">
-                <h1>Tech para empresas que vendem mais.</h1>
-                <p>
-                    Soluções digitais sob medida para empresas B2B que querem automatizar processos,
-                    melhorar a eficiência operacional e crescer com inteligência.
-                </p>
-                <div class="hero-actions">
-                    <a href="#produtos" class="primary-btn">Ver catálogo</a>
-                    <a href="#contato" class="secondary-btn">Solicitar orçamento</a>
-                </div>
+                <nav class="nav" aria-label="Navegação principal">
+                    <a href="#servicos">Soluções</a>
+                    <a href="#catalogo">Catálogo</a>
+                    <a href="#como-trabalhamos">Como trabalhamos</a>
+                    <a href="#orcamento" class="cta">Pedir orçamento</a>
+                </nav>
             </div>
+        </header>
 
-            <div class="hero-card">
-                <span class="badge">Plataforma B2B</span>
-                <div class="device-box">
-                    <div style="font-size: 14px; opacity: 0.8; margin-bottom: 8px;">Dashboard corporativo</div>
-                    <div style="font-size: 42px; font-weight: 800;">+178%</div>
-                    <div style="font-size: 14px; opacity: 0.8; margin-top: 8px;">crescimento em eficiência operacional</div>
-                    <div class="mini-stats">
-                        <div>
-                            <strong>24/7</strong>
-                            <span>Suporte</span>
+        <main id="inicio">
+            <section class="hero-section" aria-labelledby="hero-title">
+                <div class="container hero">
+                    <div class="hero-copy">
+                        <p class="eyebrow">Tecnologia B2B sem complicações</p>
+                        <h1 id="hero-title">A infraestrutura certa para a sua empresa <span class="blue-text">ir mais longe.</span></h1>
+                        <p>
+                            Equipamento profissional, redes, cloud e suporte especializado num só parceiro.
+                            A NexTech cria postos de trabalho prontos para a sua equipa produzir com segurança.
+                        </p>
+
+                        <div class="hero-actions">
+                            <a href="#orcamento" class="primary-btn">Construir o meu pedido</a>
+                            <a href="#catalogo" class="secondary-btn">Explorar produtos</a>
                         </div>
-                        <div>
-                            <strong>3x</strong>
-                            <span>Mais rapidez</span>
+
+                        <div class="trust-line" aria-label="Vantagens NexTech">
+                            <span><i></i>Equipamento para empresas</span>
+                            <span><i></i>Implementação e suporte</span>
+                            <span><i></i>Propostas à medida</span>
+                        </div>
+                    </div>
+
+                    <div class="hero-visual" aria-label="Identidade visual NexTech">
+                        <div class="hero-card">
+                            <img class="hero-logo-image" src="{!URLFOR($Resource.NexTechAssets, 'images/nextech-logo.png')}" alt="NexTech Technology Solutions Future" />
+                            <div class="hero-card-grid" aria-hidden="true"></div>
+                            <span class="visual-badge">Tecnologia que acompanha</span>
+                            <div class="visual-caption">
+                                <div>
+                                    <span>Ecossistema NexTech</span>
+                                    <strong>Hardware, serviços e continuidade</strong>
+                                </div>
+                                <em>para cada equipa</em>
+                            </div>
+                        </div>
+                        <span class="floating-pixel pixel-one" aria-hidden="true"></span>
+                        <span class="floating-pixel pixel-two" aria-hidden="true"></span>
+                        <span class="floating-pixel pixel-three" aria-hidden="true"></span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section" id="catalogo" aria-labelledby="catalogo-title">
+                <div class="container">
+                    <div class="section-heading">
+                        <p class="section-kicker">Catálogo para empresas</p>
+                        <h2 id="catalogo-title">Tecnologia pronta a trabalhar consigo.</h2>
+                        <p>
+                            Uma seleção de referência para equipar, renovar ou expandir a sua operação.
+                            Os valores são indicativos, sem IVA, e ajustados à configuração e quantidade pretendidas.
+                        </p>
+                    </div>
+
+                    <div class="catalog-grid">
+                        <article class="catalog-card">
+                            <div class="product-visual" aria-hidden="true">
+                                <div class="device device-laptop"></div>
+                            </div>
+                            <div class="product-content">
+                                <span class="tag">Mobilidade</span>
+                                <h3>Portátil Business 14</h3>
+                                <p>Desempenho profissional, gestão simplificada e autonomia para equipas híbridas.</p>
+                                <div class="product-price-row">
+                                    <div>
+                                        <span class="price-caption">Desde</span>
+                                        <span class="price">899 € <small>un.</small></span>
+                                    </div>
+                                    <button class="select-product-btn" type="button" data-select-product="product-laptop" aria-label="Adicionar Portátil Business 14 ao pedido">Adicionar →</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="catalog-card">
+                            <div class="product-visual" aria-hidden="true">
+                                <div class="device device-workstation"></div>
+                            </div>
+                            <div class="product-content">
+                                <span class="tag">Desempenho</span>
+                                <h3>Workstation Pro</h3>
+                                <p>Posto de trabalho preparado para cargas exigentes, criação e multitarefa.</p>
+                                <div class="product-price-row">
+                                    <div>
+                                        <span class="price-caption">Desde</span>
+                                        <span class="price">1.490 € <small>un.</small></span>
+                                    </div>
+                                    <button class="select-product-btn" type="button" data-select-product="product-workstation" aria-label="Adicionar Workstation Pro ao pedido">Adicionar →</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="catalog-card">
+                            <div class="product-visual" aria-hidden="true">
+                                <div class="device device-kit"></div>
+                            </div>
+                            <div class="product-content">
+                                <span class="tag">Produtividade</span>
+                                <h3>Kit Monitor + Dock</h3>
+                                <p>Monitor, dock e periféricos para criar um posto organizado e produtivo.</p>
+                                <div class="product-price-row">
+                                    <div>
+                                        <span class="price-caption">Desde</span>
+                                        <span class="price">459 € <small>kit</small></span>
+                                    </div>
+                                    <button class="select-product-btn" type="button" data-select-product="product-kit" aria-label="Adicionar Kit Monitor mais Dock ao pedido">Adicionar →</button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <p class="catalog-note">Precisa de outra configuração, marca ou quantidade? Inclua-a no pedido e tratamos da proposta.</p>
+                </div>
+            </section>
+
+            <section class="section section-soft" id="servicos" aria-labelledby="servicos-title">
+                <div class="container">
+                    <div class="section-heading centered">
+                        <p class="section-kicker">Serviços que dão continuidade</p>
+                        <h2 id="servicos-title">Mais do que fornecer equipamento.</h2>
+                        <p>Combinamos a tecnologia certa com os serviços necessários para a manter simples, segura e disponível.</p>
+                    </div>
+
+                    <div class="services-grid">
+                        <article class="service-card">
+                            <div class="service-icon" aria-hidden="true">01</div>
+                            <h3>Suporte IT gerido</h3>
+                            <p>Um ponto de contacto para acompanhar utilizadores, equipamentos e necessidades do dia a dia.</p>
+                            <button type="button" class="text-link" data-select-service="service-managed-it" aria-label="Quero saber mais sobre Suporte IT gerido">Quero saber mais →</button>
+                        </article>
+
+                        <article class="service-card">
+                            <div class="service-icon" aria-hidden="true">02</div>
+                            <h3>Redes e Wi-Fi empresarial</h3>
+                            <p>Concebemos e instalamos ligações estáveis, dimensionadas para a realidade da sua equipa.</p>
+                            <button type="button" class="text-link" data-select-service="service-network" aria-label="Quero saber mais sobre Redes e Wi-Fi empresarial">Quero saber mais →</button>
+                        </article>
+
+                        <article class="service-card">
+                            <div class="service-icon" aria-hidden="true">03</div>
+                            <h3>Segurança e backup</h3>
+                            <p>Proteja dispositivos, identidades e informação com uma abordagem prática à continuidade.</p>
+                            <button type="button" class="text-link" data-select-service="service-security" aria-label="Quero saber mais sobre Segurança e backup">Quero saber mais →</button>
+                        </article>
+
+                        <article class="service-card">
+                            <div class="service-icon" aria-hidden="true">04</div>
+                            <h3>Cloud e colaboração</h3>
+                            <p>Ferramentas e acompanhamento para tornar a colaboração mais fluida, onde quer que a equipa esteja.</p>
+                            <button type="button" class="text-link" data-select-service="service-cloud" aria-label="Quero saber mais sobre Cloud e colaboração">Quero saber mais →</button>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section" id="como-trabalhamos" aria-labelledby="como-title">
+                <div class="container value-layout">
+                    <div class="value-statement">
+                        <div class="quote-mark" aria-hidden="true">“</div>
+                        <p>Não vendemos uma caixa. Entregamos um ambiente tecnológico pensado para a forma como a sua empresa trabalha.</p>
+                        <small>NexTech · Tecnologia com contexto</small>
+                    </div>
+
+                    <div>
+                        <div class="section-heading">
+                            <p class="section-kicker">A forma NexTech</p>
+                            <h2 id="como-title">Da necessidade à operação, com clareza.</h2>
+                            <p>Começamos por perceber o que a sua equipa precisa. Depois, desenhamos uma solução que faz sentido hoje e acompanha o crescimento amanhã.</p>
+                        </div>
+
+                        <div class="work-steps">
+                            <article class="work-step">
+                                <span class="step-number">01</span>
+                                <div>
+                                    <h3>Ouvimos e diagnosticamos</h3>
+                                    <p>Analisamos utilizadores, espaço, desafios e objetivos para evitar compras genéricas.</p>
+                                </div>
+                            </article>
+                            <article class="work-step">
+                                <span class="step-number">02</span>
+                                <div>
+                                    <h3>Desenhamos a melhor combinação</h3>
+                                    <p>Equipamentos, configuração e serviços reunidos numa proposta simples de comparar.</p>
+                                </div>
+                            </article>
+                            <article class="work-step">
+                                <span class="step-number">03</span>
+                                <div>
+                                    <h3>Implementamos e acompanhamos</h3>
+                                    <p>Preparamos a tecnologia para entrar em produção e continuamos disponíveis quando precisar.</p>
+                                </div>
+                            </article>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
 
-        <div class="section-title" id="solucoes">
-            <h2>Produtos em destaque</h2>
-            <p>Ferramentas essenciais para otimizar vendas, atendimento e gestão B2B.</p>
-        </div>
+                <div class="container feature-strip" aria-label="Valor NexTech">
+                    <article class="feature-box">
+                        <div class="feature-icon" aria-hidden="true">↗</div>
+                        <h3>Uma visão completa</h3>
+                        <p>Hardware, serviços e suporte alinhados em vez de fornecedores dispersos.</p>
+                    </article>
+                    <article class="feature-box">
+                        <div class="feature-icon" aria-hidden="true">⌁</div>
+                        <h3>Escolhas com propósito</h3>
+                        <p>Recomendamos o que encaixa na sua operação, não apenas o que está no catálogo.</p>
+                    </article>
+                    <article class="feature-box">
+                        <div class="feature-icon" aria-hidden="true">◎</div>
+                        <h3>Continuidade para a equipa</h3>
+                        <p>Uma base tecnológica preparada para as rotinas de hoje e os próximos desafios.</p>
+                    </article>
+                </div>
+            </section>
 
-        <div class="products" id="produtos">
-            <div class="product-card">
-                <div class="product-image product-1">CRM Pro</div>
-                <div class="product-content">
-                    <span class="tag">Gestão</span>
-                    <h3>CRM Empresarial</h3>
-                    <p>Centralize clientes, oportunidades, automações e acompanhamento de vendas em uma única plataforma.</p>
-                    <div class="price-row">
-                        <div class="price">R$ 899 <small>/mês</small></div>
-                        <button type="button" class="buy-btn">Comprar</button>
+            <section class="quote-section" id="orcamento" aria-labelledby="orcamento-title">
+                <div class="container quote-layout">
+                    <div class="quote-copy">
+                        <p class="section-kicker">Fale com a NexTech</p>
+                        <h2 id="orcamento-title">Peça exatamente aquilo de que precisa.</h2>
+                        <p>
+                            Selecione produtos, serviços e quantidades. Enviamos a sua configuração ao nosso especialista para preparar uma resposta ajustada à sua empresa.
+                        </p>
+
+                        <div class="quote-promises">
+                            <div class="quote-promise">Pode pedir orçamento, informações ou aconselhamento técnico no mesmo formulário.</div>
+                            <div class="quote-promise">As escolhas seguem organizadas para a equipa comercial analisar o pedido.</div>
+                            <div class="quote-promise">Para configurações especiais, descreva a necessidade no campo de mensagem.</div>
+                        </div>
+                    </div>
+
+                    <form id="quote-form" class="quote-form" action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8&amp;orgId=00Dfj00000Yu14K" method="POST">
+                        <input type="hidden" name="orgid" value="00Dfj00000Yu14K" />
+                        <input type="hidden" name="retURL" value="{!URLFOR($Page.obrigado)}" />
+                        <input type="hidden" id="subject" name="subject" value="Pedido através do site NexTech" />
+
+                        <div class="form-intro">
+                            <h3>Configurar pedido</h3>
+                            <span class="form-status">Resposta personalizada</span>
+                        </div>
+
+                        <fieldset class="form-section form-fieldset">
+                            <legend class="form-label">Como podemos ajudar?</legend>
+                            <div class="request-types">
+                                <label class="request-type">
+                                    <input type="radio" name="requestIntent" value="Pedido de orçamento" data-intent="true" checked="checked" />
+                                    <span>Quero um orçamento</span>
+                                </label>
+                                <label class="request-type">
+                                    <input type="radio" name="requestIntent" value="Pedido de informações" data-intent="true" />
+                                    <span>Quero informações</span>
+                                </label>
+                                <label class="request-type">
+                                    <input type="radio" name="requestIntent" value="Aconselhamento técnico" data-intent="true" />
+                                    <span>Quero falar com um especialista</span>
+                                </label>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="form-section form-fieldset" aria-describedby="product-help">
+                            <legend class="form-label">Produtos de interesse</legend>
+                            <p id="product-help" class="form-help">Marque os equipamentos e indique a quantidade pretendida.</p>
+                            <div class="quote-options">
+                                <div class="quote-choice">
+                                    <input id="product-laptop" type="checkbox" data-product-selection="true" data-label="Portátil Business 14" />
+                                    <label class="choice-toggle" for="product-laptop">
+                                        <span class="choice-check" aria-hidden="true"></span>
+                                        <span class="choice-copy">
+                                            <strong>Portátil Business 14</strong>
+                                            <small>Desde 899 € por unidade</small>
+                                        </span>
+                                    </label>
+                                    <label class="quantity-wrap" for="quantity-laptop">Qtd. <input id="quantity-laptop" type="number" min="1" max="200" value="1" disabled="disabled" aria-label="Quantidade de Portátil Business 14" data-quantity-for="product-laptop" /></label>
+                                </div>
+
+                                <div class="quote-choice">
+                                    <input id="product-workstation" type="checkbox" data-product-selection="true" data-label="Workstation Pro" />
+                                    <label class="choice-toggle" for="product-workstation">
+                                        <span class="choice-check" aria-hidden="true"></span>
+                                        <span class="choice-copy">
+                                            <strong>Workstation Pro</strong>
+                                            <small>Desde 1.490 € por unidade</small>
+                                        </span>
+                                    </label>
+                                    <label class="quantity-wrap" for="quantity-workstation">Qtd. <input id="quantity-workstation" type="number" min="1" max="200" value="1" disabled="disabled" aria-label="Quantidade de Workstation Pro" data-quantity-for="product-workstation" /></label>
+                                </div>
+
+                                <div class="quote-choice">
+                                    <input id="product-kit" type="checkbox" data-product-selection="true" data-label="Kit Monitor + Dock" />
+                                    <label class="choice-toggle" for="product-kit">
+                                        <span class="choice-check" aria-hidden="true"></span>
+                                        <span class="choice-copy">
+                                            <strong>Kit Monitor + Dock</strong>
+                                            <small>Desde 459 € por kit</small>
+                                        </span>
+                                    </label>
+                                    <label class="quantity-wrap" for="quantity-kit">Qtd. <input id="quantity-kit" type="number" min="1" max="200" value="1" disabled="disabled" aria-label="Quantidade de Kit Monitor mais Dock" data-quantity-for="product-kit" /></label>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="form-section form-fieldset">
+                            <legend class="form-label">Serviços de interesse</legend>
+                            <div class="service-options">
+                                <label class="service-option" for="service-managed-it">
+                                    <input id="service-managed-it" type="checkbox" data-service-selection="true" data-label="Suporte IT gerido" />
+                                    <span class="choice-check" aria-hidden="true"></span>
+                                    <span>Suporte IT gerido</span>
+                                </label>
+                                <label class="service-option" for="service-network">
+                                    <input id="service-network" type="checkbox" data-service-selection="true" data-label="Redes e Wi-Fi empresarial" />
+                                    <span class="choice-check" aria-hidden="true"></span>
+                                    <span>Redes e Wi-Fi empresarial</span>
+                                </label>
+                                <label class="service-option" for="service-security">
+                                    <input id="service-security" type="checkbox" data-service-selection="true" data-label="Segurança e backup" />
+                                    <span class="choice-check" aria-hidden="true"></span>
+                                    <span>Segurança e backup</span>
+                                </label>
+                                <label class="service-option" for="service-cloud">
+                                    <input id="service-cloud" type="checkbox" data-service-selection="true" data-label="Cloud e colaboração" />
+                                    <span class="choice-check" aria-hidden="true"></span>
+                                    <span>Cloud e colaboração</span>
+                                </label>
+                            </div>
+                            <div id="quote-summary" class="quote-summary" aria-live="polite">Ainda não selecionou produtos ou serviços. Pode enviar apenas uma pergunta.</div>
+                        </fieldset>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Nome completo <span class="required-mark" aria-hidden="true">*</span></label>
+                                <input id="name" maxlength="80" name="name" type="text" autocomplete="name" placeholder="O seu nome" required="required" />
+                            </div>
+                            <div class="form-group">
+                                <label for="company">Empresa <span class="required-mark" aria-hidden="true">*</span></label>
+                                <input id="company" maxlength="80" name="company" type="text" autocomplete="organization" placeholder="Nome da empresa" required="required" />
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email profissional <span class="required-mark" aria-hidden="true">*</span></label>
+                                <input id="email" maxlength="80" name="email" type="email" autocomplete="email" placeholder="nome@empresa.pt" required="required" />
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Telefone <span class="required-mark" aria-hidden="true">*</span></label>
+                                <input id="phone" maxlength="40" name="phone" type="tel" autocomplete="tel" placeholder="+351 912 000 000" required="required" />
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="description">Contexto ou questão</label>
+                            <textarea id="description" name="description" placeholder="Ex.: precisamos de equipar uma equipa de 12 pessoas, instalar rede no novo escritório ou comparar configurações."></textarea>
+                        </div>
+
+                        <p class="form-required-note"><span class="required-mark" aria-hidden="true">*</span> Campos obrigatórios</p>
+                        <noscript><p class="no-script-note">Para incluir produtos, serviços e quantidades, descreva-os no campo de contexto.</p></noscript>
+                        <button type="submit" name="submit" class="submit-btn">Enviar pedido para a NexTech</button>
+                        <p class="form-privacy">Ao enviar, concorda que a NexTech use estes dados para responder ao seu pedido. Para questões sobre privacidade, contacte-nos.</p>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-grid">
+                    <div class="footer-section footer-brand-section">
+                        <a class="brand footer-brand" href="#inicio" aria-label="NexTech - página inicial">
+                            <span class="brand-symbol" aria-hidden="true"></span>
+                            <span class="brand-name">
+                                <strong>Nex<span>Tech</span></strong>
+                                <small>Technology · Solutions · Future</small>
+                            </span>
+                        </a>
+                        <p class="footer-description">Tecnologia, equipamento e serviços para empresas que querem trabalhar melhor hoje e crescer com confiança amanhã.</p>
+                    </div>
+
+                    <div class="footer-section">
+                        <h2 class="footer-section-title">Produtos</h2>
+                        <ul class="footer-list">
+                            <li><a href="#catalogo">Portáteis empresariais</a></li>
+                            <li><a href="#catalogo">Workstations</a></li>
+                            <li><a href="#catalogo">Monitores e acessórios</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-section">
+                        <h2 class="footer-section-title">Soluções</h2>
+                        <ul class="footer-list">
+                            <li><a href="#servicos">Suporte IT</a></li>
+                            <li><a href="#servicos">Redes e Wi-Fi</a></li>
+                            <li><a href="#servicos">Segurança e cloud</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-section">
+                        <h2 class="footer-section-title">Contacto</h2>
+                        <ul class="footer-list">
+                            <li><a href="mailto:contato@nextech.com">contato@nextech.com</a></li>
+                            <li><a href="tel:+351912322463">+351 912 322 463</a></li>
+                            <li>Porto, Portugal</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-divider"></div>
+                <div class="footer-bottom">
+                    <p class="footer-copyright">© 2026 NexTech. Todos os direitos reservados.</p>
+                    <div class="footer-links-bottom">
+                        <span>Política de privacidade</span>
+                        <span>Termos de utilização</span>
                     </div>
                 </div>
             </div>
-
-            <div class="product-card">
-                <div class="product-image product-2">ERP Lite</div>
-                <div class="product-content">
-                    <span class="tag">Operação</span>
-                    <h3>ERP B2B</h3>
-                    <p>Controle financeiro, estoque, pedidos e processos internos com visibilidade completa da operação.</p>
-                    <div class="price-row">
-                        <div class="price">R$ 1.299 <small>/mês</small></div>
-                        <button type="button" class="buy-btn">Comprar</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-image product-3">IA Suite</div>
-                <div class="product-content">
-                    <span class="tag">Inovação</span>
-                    <h3>Inteligência Artificial</h3>
-                    <p>Automatize atendimento, analise dados em tempo real e aumente a produtividade da sua equipe.</p>
-                    <div class="price-row">
-                        <div class="price">R$ 1.599 <small>/mês</small></div>
-                        <button type="button" class="buy-btn">Comprar</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="section-title">
-            <h2>Por que escolher a NexTech?</h2>
-        </div>
-
-        <div class="features">
-            <div class="feature-box">
-                <div class="icon">⚡</div>
-                <h4>Processos ágeis</h4>
-                <p>Automatize rotinas e reduza tempo gasto em tarefas repetitivas.</p>
-            </div>
-            <div class="feature-box">
-                <div class="icon">📊</div>
-                <h4>Dados em tempo real</h4>
-                <p>Acompanhe métricas de vendas, operação e atendimento com precisão.</p>
-            </div>
-            <div class="feature-box">
-                <div class="icon">🔒</div>
-                <h4>Segurança</h4>
-                <p>Infraestrutura confiável e suporte especializado para empresas em crescimento.</p>
-            </div>
-        </div>
+        </footer>
     </div>
 
-    <div class="contact-section" id="contato">
-        <div class="container">
-            <div class="section-title">
-                <h2>Entre em contato</h2>
-                <p>Fale com nossos especialistas e descubra como podemos ajudar seu negócio a crescer.</p>
-            </div>
-
-            <div class="contact-wrapper">
-                <div class="contact-info">
-                    <div class="info-box">
-                        <div class="info-icon">📧</div>
-                        <h4>Email</h4>
-                        <p><a href="mailto:contato@nextech.com">contato@nextech.com</a></p>
-                    </div>
-                    <div class="info-box">
-                        <div class="info-icon">📱</div>
-                        <h4>Telefone</h4>
-                        <p><a href="tel:+551140000000">(11) 4000-0000</a></p>
-                    </div>
-                    <div class="info-box">
-                        <div class="info-icon">📍</div>
-                        <h4>Localização</h4>
-                        <p>São Paulo, SP</p>
-                    </div>
-                </div>
-
-                <form class="contact-form" action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8&amp;orgId=00Dfj00000Yu14K" method="POST">
-                    <input type="hidden" name="orgid" value="00Dfj00000Yu14K"/>
-                    <input type="hidden" name="retURL" value="{!URLFOR($Page.obrigado)}"/>
-
-                    <div class="form-group">
-                        <label for="name">Nome Completo</label>
-                        <input id="name" maxlength="80" name="name" type="text" placeholder="Seu nome"/>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input id="email" maxlength="80" name="email" type="email" placeholder="seu@email.com"/>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="phone">Telefone</label>
-                        <input id="phone" maxlength="40" name="phone" type="tel" placeholder="(11) 99999-9999"/>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="subject">Assunto</label>
-                        <input id="subject" maxlength="80" name="subject" type="text" placeholder="Qual é sua dúvida?"/>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="description">Mensagem</label>
-                        <textarea name="description" id="description" placeholder="Descreva sua necessidade em detalhes..." rows="6"></textarea>
-                    </div>
-
-                    <button type="submit" name="submit" class="submit-btn">Enviar Mensagem</button>
-                </form>
-            </div>
-        </div>
-    </div>
-
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-grid">
-                <div class="footer-section footer-brand-section">
-                    <h3 class="footer-brand">NexTech</h3>
-                    <p class="footer-description">Soluções digitais sob medida para empresas B2B que querem crescer com inteligência.</p>
-                    <div class="footer-socials">
-                        <a href="#" class="social-link" title="LinkedIn">in</a>
-                        <a href="#" class="social-link" title="Twitter">tw</a>
-                        <a href="#" class="social-link" title="Facebook">f</a>
-                    </div>
-                </div>
-
-                <div class="footer-section">
-                    <h4 class="footer-section-title">Produtos</h4>
-                    <ul class="footer-list">
-                        <li><a href="#produtos">CRM Empresarial</a></li>
-                        <li><a href="#produtos">ERP B2B</a></li>
-                        <li><a href="#produtos">Inteligência Artificial</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-section">
-                    <h4 class="footer-section-title">Empresa</h4>
-                    <ul class="footer-list">
-                        <li><a href="#solucoes">Soluções</a></li>
-                        <li><a href="#sobre">Sobre</a></li>
-                        <li><a href="#blog">Blog</a></li>
-                        <li><a href="#careers">Carreiras</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-section">
-                    <h4 id="contato" class="footer-section-title">Contato</h4>
-                    <ul class="footer-list">
-                        <li><a href="mailto:contato@nextech.com">contato@nextech.com</a></li>
-                        <li><a href="tel:+551140000000">(11) 4000-0000</a></li>
-                        <li>São Paulo, SP</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="footer-divider"></div>
-
-            <div class="footer-bottom">
-                <p class="footer-copyright">© 2024 NexTech. Todos os direitos reservados.</p>
-                <div class="footer-links-bottom">
-                    <a href="#politica">Política de Privacidade</a>
-                    <a href="#termos">Termos de Serviço</a>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <apex:includeScript value="{!URLFOR($Resource.NexTechAssets, 'js/quote-form.js')}" />
 </apex:page>
