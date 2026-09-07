@@ -1,0 +1,64 @@
+h1 {
+  color: #0c61f4;
+}
+
+body {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 20px;
+  color: #070ee3;
+  background-color: #f6f3f3;
+  font-family: Arial, sans-serif;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 15px;
+  background-color: #0dc9f3;
+  border-radius: 5px;
+}
+
+input {
+  width: 75%;
+}
+
+input, button {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  width: 30%;
+  background-color: #0c61f4;
+  color: #fff;
+  cursor: pointer;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 8px 0;
+  padding: 10px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+li div {
+  display: flex;
+  gap: 10px;
+}
+
+li div button {
+  width: auto;
+  padding: 5px 10px;
+  flex-shrink: 0;
+}
