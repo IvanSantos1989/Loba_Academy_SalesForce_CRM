@@ -5,6 +5,8 @@
             return;
         }
 
+        var caseEndpoint = 'https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8&orgId=00Dfj00000Yu14K';
+        var leadEndpoint = 'https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00Dfj00000Yu14K';
         var productInputs = Array.prototype.slice.call(document.querySelectorAll('[data-product-selection]'));
         var serviceInputs = Array.prototype.slice.call(document.querySelectorAll('[data-service-selection]'));
         var summary = document.getElementById('quote-summary');
@@ -120,6 +122,7 @@
         form.addEventListener('submit', function () {
             var selectedIntent = document.querySelector('[data-intent]:checked');
             var intent = selectedIntent ? selectedIntent.value : 'Pedido através do site';
+            var isInformationRequest = intent === 'Pedido de informações';
             var products = selectedProducts();
             var services = selectedServices();
             var message = document.getElementById('description').value.trim();
@@ -133,6 +136,8 @@
                 lines.push('Mensagem: ' + message);
             }
 
+            form.action = isInformationRequest ? leadEndpoint : caseEndpoint;
+            document.getElementById('last-name').value = document.getElementById('name').value.trim();
             document.getElementById('subject').value = intent + ' — NexTech';
             document.getElementById('description').value = lines.join('\n');
         });

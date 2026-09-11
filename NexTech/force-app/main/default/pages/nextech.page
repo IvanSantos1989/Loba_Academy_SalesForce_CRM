@@ -9,8 +9,10 @@
         <header class="topbar">
             <div class="inner">
                 <a class="brand brand-logo" href="#inicio" aria-label="NexTech - página inicial">
-                    <span class="navbar-logo-crop">
-                        <img class="navbar-logo-image" src="{!URLFOR($Resource.NexTechAssets, 'images/nextech-logo.png')}" alt="NexTech" />
+                    <span class="brand-symbol" aria-hidden="true"></span>
+                    <span class="brand-name">
+                        <strong>Nex<span>Tech</span></strong>
+                        <small>Technology · Solutions · Future</small>
                     </span>
                 </a>
 
@@ -257,6 +259,8 @@
                         <input type="hidden" name="orgid" value="00Dfj00000Yu14K" />
                         <input type="hidden" name="retURL" value="{!URLFOR($Page.obrigado)}" />
                         <input type="hidden" id="subject" name="subject" value="Pedido através do site NexTech" />
+                        <input type="hidden" id="last-name" name="lastname" value="" />
+                        <input type="hidden" name="lead_source" value="Website NexTech" />
 
                         <div class="form-intro">
                             <h3>Configurar pedido</h3>

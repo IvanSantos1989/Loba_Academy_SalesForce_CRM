@@ -9,8 +9,10 @@
         <header class="topbar">
             <div class="inner">
                 <a class="brand brand-logo" href="{!URLFOR($Page.nextech)}" aria-label="NexTech - página inicial">
-                    <span class="navbar-logo-crop">
-                        <img class="navbar-logo-image" src="{!URLFOR($Resource.NexTechAssets, 'images/nextech-logo.png')}" alt="NexTech" />
+                    <span class="brand-symbol" aria-hidden="true"></span>
+                    <span class="brand-name">
+                        <strong>Nex<span>Tech</span></strong>
+                        <small>Technology · Solutions · Future</small>
                     </span>
                 </a>
 
