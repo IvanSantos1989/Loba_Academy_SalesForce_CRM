@@ -9,11 +9,7 @@
         <header class="topbar">
             <div class="inner">
                 <a class="brand brand-logo" href="{!URLFOR($Page.nextech)}" aria-label="NexTech - página inicial">
-                    <span class="brand-symbol" aria-hidden="true"></span>
-                    <span class="brand-name">
-                        <strong>Nex<span>Tech</span></strong>
-                        <small>Technology · Solutions · Future</small>
-                    </span>
+                    <img class="brand-image" src="{!URLFOR($Resource.NexTechAssets, 'images/nextech-logo.png')}" alt="NexTech" />
                 </a>
 
                 <nav class="nav" aria-label="Navegação principal">
@@ -111,11 +107,7 @@
                 <div class="footer-grid">
                     <div class="footer-section footer-brand-section">
                         <a class="brand footer-brand" href="{!URLFOR($Page.nextech)}" aria-label="NexTech - página inicial">
-                            <span class="brand-symbol" aria-hidden="true"></span>
-                            <span class="brand-name">
-                                <strong>Nex<span>Tech</span></strong>
-                                <small>Technology · Solutions · Future</small>
-                            </span>
+                            <img class="brand-image" src="{!URLFOR($Resource.NexTechAssets, 'images/nextech-logo.png')}" alt="NexTech" />
                         </a>
                         <p class="footer-description">Tecnologia, equipamento e serviços para empresas que querem trabalhar melhor hoje e crescer com confiança amanhã.</p>
                     </div>
