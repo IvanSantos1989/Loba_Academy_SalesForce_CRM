@@ -267,15 +267,15 @@
                             <legend class="form-label">Como podemos ajudar?</legend>
                             <div class="request-types">
                                 <label class="request-type">
-                                    <input type="radio" name="requestIntent" value="Pedido de orçamento" data-intent="true" checked="checked" />
+                                    <input type="radio" name="type" value="Pedido de Orçamento" data-intent="true" checked="checked" />
                                     <span>Quero um orçamento</span>
                                 </label>
                                 <label class="request-type">
-                                    <input type="radio" name="requestIntent" value="Pedido de informações" data-intent="true" />
+                                    <input type="radio" name="type" value="Pedido de Informações" data-intent="true" />
                                     <span>Quero informações</span>
                                 </label>
                                 <label class="request-type">
-                                    <input type="radio" name="requestIntent" value="Aconselhamento técnico" data-intent="true" />
+                                    <input type="radio" name="type" value="Falar com Especialista" data-intent="true" />
                                     <span>Quero falar com um especialista</span>
                                 </label>
                             </div>
