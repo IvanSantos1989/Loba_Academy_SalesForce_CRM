@@ -1,0 +1,98 @@
+<template>
+
+    <lightning-card title="NexTech Deal Health" icon-name="standard:opportunity">
+
+        <div class="slds-p-around_medium">
+
+            <!-- Resultado da análise -->
+            <template lwc:if={dealHealth}>
+
+                <h2 class="slds-text-heading_medium slds-m-bottom_small">
+                    Score: {dealHealth.score}/100
+                </h2>
+
+                <p class="slds-m-bottom_medium">
+                    <strong>Estado:</strong> {dealHealth.status}
+                </p>
+
+                <!-- Account -->
+                <p>
+                    <template lwc:if={dealHealth.hasAccount}>
+                        ✅ Account associada
+                    </template>
+                    <template lwc:else>
+                        ❌ Account em falta
+                    </template>
+                </p>
+
+                <!-- Contact -->
+                <p>
+                    <template lwc:if={dealHealth.hasContact}>
+                        ✅ Contact associado
+                    </template>
+                    <template lwc:else>
+                        ❌ Contact em falta
+                    </template>
+                </p>
+
+                <!-- Products -->
+                <p>
+                    <template lwc:if={dealHealth.hasProducts}>
+                        ✅ Produtos adicionados
+                    </template>
+                    <template lwc:else>
+                        ❌ Produtos em falta
+                    </template>
+                </p>
+
+                <!-- Amount -->
+                <p>
+                    <template lwc:if={dealHealth.hasAmount}>
+                        ✅ Valor definido
+                    </template>
+                    <template lwc:else>
+                        ❌ Valor em falta
+                    </template>
+                </p>
+
+                <!-- Close Date -->
+                <p>
+                    <template lwc:if={dealHealth.validCloseDate}>
+                        ✅ Data de fecho válida
+                    </template>
+                    <template lwc:else>
+                        ❌ Data de fecho inválida
+                    </template>
+                </p>
+
+                <!-- Alertas -->
+                <template lwc:if={dealHealth.alerts}>
+                    <div class="slds-m-top_medium">
+                        <strong>Alertas:</strong>
+
+                        <template for:each={dealHealth.alerts} for:item="alert">
+                            <p key={alert}>
+                                ⚠️ {alert}
+                            </p>
+                        </template>
+                    </div>
+                </template>
+
+                <!-- Recomendação -->
+                <div class="slds-m-top_medium">
+                    <strong>Recomendação:</strong>
+                    <p>{dealHealth.recommendation}</p>
+                </div>
+
+            </template>
+
+            <!-- Erro -->
+            <template lwc:if={error}>
+                <p>{error}</p>
+            </template>
+
+        </div>
+
+    </lightning-card>
+
+</template>
